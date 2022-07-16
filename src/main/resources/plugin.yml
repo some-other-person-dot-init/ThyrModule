@@ -1,0 +1,35 @@
+name: ThyrModule
+main: me.thyristor.thyrmodule.ThyrModule
+version: 0.0.2
+api-version: 1.16
+author: Thyristor
+prefix: Thyr
+description: Thyristor's module made for special ocassions.
+
+commands:
+   thyrtest:
+      description:
+         Make things work out and do stuff.
+   res:
+      description:
+         BIG WARNING!!! USE AT OWN RISK! Manipulates resources on the map
+   resbloodik:
+      description:
+         BIG WARNING!!! USE AT OWN RISK! Manipulates resources on the map, but algorithm made by Bloodik
+         
+permissions:
+   thyrmodule.*:
+      description: Access to ThyrModule commands
+      children:
+         thyrmodule.test: true
+         thyrmodule.res: true
+         thyrmodule.resbloodik: true
+   thyrmodule.test:
+      description: Access to module's test commands
+      default: op
+   thyrmodule.res:
+      description: Access to very dangerous commands, those manipulate with resources in the world
+      default: op
+   thyrmodule.resbloodik:
+      description: Access to very dangerous command, that manipulates with resources in the world
+      default: op

@@ -1,0 +1,10 @@
+#Extensions
+*.classpath
+*.project
+*.gradle
+*.bak
+
+#Paths
+[Tt]arget/
+.settings/
+src/test/
