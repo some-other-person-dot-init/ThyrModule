@@ -31,6 +31,10 @@
               <pattern>dev.triumphteam.gui</pattern>
               <shadedPattern>me.thyristor.thyrmodule.gui</shadedPattern>
             </relocation>
+            <relocation>
+              <pattern>de.tr7zw.changeme.nbtapi</pattern>
+              <shadedPattern>me.thyristor.thyrmodule.nbt</shadedPattern>
+            </relocation>
           </relocations>
         </configuration>
       </plugin>
@@ -49,6 +53,10 @@
       <id>dv8tion</id>
       <name>m2-dv8tion</name>
       <url>https://m2.dv8tion.net/releases</url>
+    </repository>
+    <repository>
+      <id>codemc-repo</id>
+      <url>https://repo.codemc.org/repository/maven-public/</url>
     </repository>
   </repositories>
   <dependencies>
