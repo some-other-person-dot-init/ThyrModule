@@ -12,19 +12,12 @@ import org.bukkit.inventory.ItemStack;
 
 public class PlayerListeners implements Listener
 {
-	private ThyrModule plugin;
-	
-	public PlayerListeners(ThyrModule plugin)
-	{
-		this.plugin = plugin;
-	}
-	
 	@EventHandler
 	public void ItemDropVerbot(PlayerDropItemEvent evt)
 	{
 		 Player ply = evt.getPlayer();
 		 
-		 if (plugin.enableDrop)
+		 if (ThyrModule.enableDrop)
 		 {
 			 evt.setCancelled(false);
 		 }
@@ -38,11 +31,11 @@ public class PlayerListeners implements Listener
 		 }
 	}
 	
-	@EventHandler
+	/*@EventHandler
 	public void CutsceneSneakVerbot(PlayerToggleSneakEvent evt)
 	{
 		Player ply = evt.getPlayer();
 		
 		evt.setCancelled(false);
-;	}
+	}*/
 }

@@ -5,7 +5,9 @@ This soon will be integrated into another plugin, which is developed specificall
 What does it contain so far?
 ----------------------------
 - Test command with drop forbiddance switch specifically for sender
-- Resource manipulation protocols (so far only "ore->stone" is ready) with 3 different algorithms!
+- Resource manipulation protocols (ore->stone and stone->ore with random chance of replace) with 3 different algorithms!
+- GUI command with own made base
+- GUI command using triumph-gui
 
 Requirements
 ------------
@@ -17,7 +19,3 @@ Requirements
 Build
 -----
 To build it by your own you will need Maven and Java 11+.
-
-Plans
------
-I don't know, if I will ever touch this plugin after integrating it into Potolotcraft plugin, so the current future of this is hazy.

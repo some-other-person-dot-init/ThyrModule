@@ -1,6 +1,6 @@
 name: ThyrModule
 main: me.thyristor.thyrmodule.ThyrModule
-version: 0.0.2
+version: 0.0.3
 api-version: 1.16
 author: Thyristor
 prefix: Thyr
@@ -16,6 +16,12 @@ commands:
    resbloodik:
       description:
          BIG WARNING!!! USE AT OWN RISK! Manipulates resources on the map, but algorithm made by Bloodik
+   thyrgui:
+      description:
+         Testing various guis
+   trigui:
+      description:
+         Testing Triumph guis
          
 permissions:
    thyrmodule.*:
@@ -33,3 +39,8 @@ permissions:
    thyrmodule.resbloodik:
       description: Access to very dangerous command, that manipulates with resources in the world
       default: op
+   thyrmodule.thyrgui:
+      desctiption: Access to module's guis commands
+      default: op
+   thyrmodule.triugui:
+      description: Access to module's Triumph gui commands 

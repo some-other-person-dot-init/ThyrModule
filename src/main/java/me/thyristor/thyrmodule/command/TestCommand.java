@@ -9,13 +9,6 @@ import org.bukkit.entity.Player;
 
 public class TestCommand implements CommandExecutor 
 {
-	private final ThyrModule plugin;
-	
-	public TestCommand(ThyrModule plugin)
-	{
-		this.plugin = plugin;
-	}
-
 	@Override
 	public boolean onCommand(CommandSender snd, Command cmd, String lbl, String[] arg)
 	{
@@ -23,7 +16,7 @@ public class TestCommand implements CommandExecutor
 		{
 			if (arg.length < 1)
 			{
-				snd.sendMessage("|| It seems, that it works, êñòàòè");
+				snd.sendMessage("|| It seems, that it works, ÐºÑÑ‚Ð°Ñ‚Ð¸");
 			}
 			else if (arg[0].equals("tpr"))
 			{
@@ -47,7 +40,7 @@ public class TestCommand implements CommandExecutor
 				Player ply = (Player) snd;
 				
 				this.switchEnableDrop(ply.getName());
-				ply.sendMessage("|| You switched DropVerbot (" + this.plugin.enableDrop + ")");
+				ply.sendMessage("|| You switched DropVerbot (" + ThyrModule.enableDrop + ")");
 			}
 			return true;
 		}
@@ -56,15 +49,15 @@ public class TestCommand implements CommandExecutor
 	
 	public void switchEnableDrop(String name)
 	{
-		if (plugin.enableDrop)
+		if (ThyrModule.enableDrop)
 		{
-			plugin.enableDrop = false;
-			plugin.playerListDVerbot.remove(name);
+			ThyrModule.enableDrop = false;
+			ThyrModule.playerListDVerbot.remove(name);
 		}
 		else
 		{
-			plugin.enableDrop = true;
-			plugin.playerListDVerbot.put(name, true);
+			ThyrModule.enableDrop = true;
+			ThyrModule.playerListDVerbot.put(name, true);
 		}
 	}
 }

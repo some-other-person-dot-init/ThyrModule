@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.thyristor</groupId>
   <artifactId>ThyrModule</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
    <build>
       <plugins>
           <plugin>
@@ -14,6 +14,27 @@
                   <target>11</target>
               </configuration>
           </plugin>
+          	<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-shade-plugin</artifactId>
+			    <version>3.2.4</version>
+			    <configuration>
+			        <relocations>
+			            <relocation>
+			                <pattern>dev.triumphteam.gui</pattern>
+			                <shadedPattern>me.thyristor.thyrmodule.gui</shadedPattern> <!-- Replace package here here -->
+			            </relocation>
+			        </relocations>
+			    </configuration>
+			    <executions>
+			        <execution>
+			            <phase>package</phase>
+			            <goals>
+			                <goal>shade</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
       </plugins>
    </build>
    
@@ -71,5 +92,15 @@
             <type>jar</type>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+		    <groupId>dev.triumphteam</groupId>
+		    <artifactId>triumph-gui</artifactId>
+		    <version>3.1.2</version>
+		</dependency>
+		 <dependency>
+		    <groupId>net.kyori</groupId>
+		    <artifactId>adventure-api</artifactId>
+		    <version>4.11.0</version>
+		 </dependency>
    </dependencies>
 </project>
