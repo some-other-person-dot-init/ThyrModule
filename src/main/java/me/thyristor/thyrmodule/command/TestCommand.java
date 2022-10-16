@@ -57,15 +57,16 @@ public class TestCommand implements CommandExecutor
 				
 				Player ply = (Player) snd;
 				
-				ItemStack prnt = new ItemStack(Material.PRISMARINE_SLAB, 1);
+				/*ItemStack prnt = new ItemStack(Material.PRISMARINE_SLAB, 1);
 				NBTItem nbti = new NBTItem(prnt);
 				NBTCompound disp = nbti.addCompound("display");
 				disp.setString("Name", "Printer Nordex IX-80");
 				NBTCompound comp = nbti.addCompound("printerdata");
-				comp.setBoolean("printer", true);
+				comp.setBoolean("printer", true);*/
 				
-				prnt = nbti.getItem();
-				ply.getInventory().addItem(prnt);
+				//prnt = nbti.getItem();
+				ply.getInventory().addItem(ThyrModule.printerItem);
+				ply.getInventory().addItem(ThyrModule.printerItemAlt);
 			}
 			return true;
 		}

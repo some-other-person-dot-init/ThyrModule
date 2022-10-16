@@ -72,23 +72,47 @@
 			<url>https://repo.codemc.org/repository/maven-public/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+		  <id>github</id>
+		  <name>ImageMaps repository</name>
+		  <url>https://maven.pkg.github.com/SydMontague/ImageMaps</url>
+		</repository>
+		<repository>
+		    <id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+		<repository>
+		        <id>redempt.dev</id>
+		        <url>https://redempt.dev</url>
+		</repository>
+		<repository>
+		    <id>papermc</id>
+		    <url>https://repo.papermc.io/repository/maven-public/</url>
+		</repository>
    </repositories>
    
     <dependencies>
-       <dependency>
+		<dependency>
+		    <groupId>io.papermc.paper</groupId>
+		    <artifactId>paper-api</artifactId>
+		    <version>1.19.2-R0.3-SNAPSHOT</version>
+		    <type>jar</type>
+		    <scope>provided</scope>
+		</dependency>
+       <!--<dependency>
            <groupId>org.spigotmc</groupId>
            <artifactId>spigot-api</artifactId>
-           <version>1.16.5-R0.1-SNAPSHOT</version><!--change this value depending on the version or use LATEST-->
+           <version>1.16.5-R0.1-SNAPSHOT</version>
            <type>jar</type>
            <scope>provided</scope>
-       </dependency>
-       <dependency>
+       </dependency>-->
+       <!--<dependency>
        		<groupId>org.bukkit</groupId>
        		<artifactId>craftbukkit</artifactId>
        		<version>1.16.5</version>
        		<type>jar</type>
        		<scope>provided</scope>
-       </dependency>
+       </dependency>-->
        <dependency>
             <groupId>com.denizenscript</groupId>
             <artifactId>denizen</artifactId>
@@ -110,6 +134,23 @@
 		 	<groupId>de.tr7zw</groupId>
 			<artifactId>item-nbt-api</artifactId>
 			<version>2.10.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>net.craftcitizen</groupId>
+		  <artifactId>imagemaps</artifactId>
+		  <version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.MMonkeyKiller</groupId>
+		    <artifactId>CustomBlocks</artifactId>
+		    <version>3.0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		        <groupId>com.github.Redempt</groupId>
+		        <artifactId>RedLib</artifactId>
+		        <version>6.5.8</version>
+		        <scope>provided</scope>
 		</dependency>
    </dependencies>
 </project>

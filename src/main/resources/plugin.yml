@@ -5,6 +5,7 @@ api-version: 1.16
 author: Thyristor
 prefix: Thyr
 description: Thyristor's module made for special ocassions.
+depend: [CustomBlocks]
 
 commands:
    thyrtest:
@@ -30,6 +31,8 @@ permissions:
          thyrmodule.test: true
          thyrmodule.res: true
          thyrmodule.resbloodik: true
+         thyrmodule.thyrgui: true
+         thyrmodule.trigui: true
    thyrmodule.test:
       description: Access to module's test commands
       default: op
@@ -42,5 +45,5 @@ permissions:
    thyrmodule.thyrgui:
       desctiption: Access to module's guis commands
       default: op
-   thyrmodule.triugui:
+   thyrmodule.trigui:
       description: Access to module's Triumph gui commands 
